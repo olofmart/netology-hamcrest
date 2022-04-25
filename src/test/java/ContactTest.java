@@ -7,12 +7,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class ContactTest {
-    static Contact sut;
 
     @BeforeAll
     public static void preTest() {
         System.out.println("Tests started");
-        sut = new Contact("Oleg", "M.", "+7-903-111-22-33");
     }
 
     @BeforeEach
@@ -27,6 +25,7 @@ public class ContactTest {
 
     @Test
     public void isClass() {
+        Contact sut = new Contact("Oleg", "M.", "+7-903-111-22-33");
         assertThat(sut, instanceOf(Contact.class));
     }
 }
